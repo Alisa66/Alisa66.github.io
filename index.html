@@ -60,6 +60,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/study">学习</a></li>
+	        
 				<li><a href="/tags/life">生活</a></li>
 	        
 			</ul>
@@ -112,6 +114,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -125,12 +129,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/life">生活</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/study">学习</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/life">生活</a></li>
 		        
 				</ul>
 			</nav>
@@ -146,6 +152,182 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-studys" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/25/studys/">studys</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/25/studys/" class="archive-article-date">
+  	<time datetime="2018-04-25T09:19:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Flex语法-实战布局-九点麻将"><a href="#Flex语法-实战布局-九点麻将" class="headerlink" title="Flex语法+实战布局(九点麻将)"></a>Flex语法+实战布局(九点麻将)</h1><p>参照阮一峰老师的博客，然后自己写的。</p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="noopener">Flex 布局教程：实例篇 - 阮一峰的网络日志</a></p>
+<p>源码地址：</p>
+<p><a href="https://github.com/Alisa66/Flex_demo" target="_blank" rel="noopener">Alisa66/Flex_demo</a></p>
+<p>效果预览：</p>
+<h2 id="justify-content-没有理解到"><a href="#justify-content-没有理解到" class="headerlink" title="justify-content!!!没有理解到"></a>justify-content!!!没有理解到</h2><h5 id="flex-direction-row（主轴为水平方向，起点在左端）flex-direction-row-reverse（主轴为水平方向，起点在右端）"><a href="#flex-direction-row（主轴为水平方向，起点在左端）flex-direction-row-reverse（主轴为水平方向，起点在右端）" class="headerlink" title="flex-direction:row（主轴为水平方向，起点在左端）flex-direction:row-reverse（主轴为水平方向，起点在右端）"></a>flex-direction:row（主轴为水平方向，起点在左端）flex-direction:row-reverse（主轴为水平方向，起点在右端）</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F613ce1f5-206b-4ef1-97b2-a33798aa8e8d%2FUntitled" alt=""></p>
+<h5 id="flex-direction-column（主轴为垂直方向-从上往下）-flex-direction-column-reverse（主轴为垂直方向-从下往上）"><a href="#flex-direction-column（主轴为垂直方向-从上往下）-flex-direction-column-reverse（主轴为垂直方向-从下往上）" class="headerlink" title="flex-direction:column（主轴为垂直方向,从上往下）  flex-direction:column-reverse（主轴为垂直方向,从下往上）"></a>flex-direction:column（主轴为垂直方向,从上往下）  flex-direction:column-reverse（主轴为垂直方向,从下往上）</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd37fdf42-8ef2-4fff-95b5-b68b3952eaff%2FUntitled" alt=""></p>
+<h5 id="flex-wrap项目以及如何换行-nowrap不换行-wrap，第一行在左上方-wrap-reverse第一行在下方（只有flex-direction：row才有这个属性）"><a href="#flex-wrap项目以及如何换行-nowrap不换行-wrap，第一行在左上方-wrap-reverse第一行在下方（只有flex-direction：row才有这个属性）" class="headerlink" title="flex-wrap项目以及如何换行 nowrap不换行|wrap，第一行在左上方|wrap-reverse第一行在下方（只有flex-direction：row才有这个属性）"></a>flex-wrap项目以及如何换行 nowrap不换行|wrap，第一行在左上方|wrap-reverse第一行在下方（只有flex-direction：row才有这个属性）</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0c74ff87-d8ce-4b99-91e9-acdeaa222f1b%2FUntitled" alt=""></p>
+<h4 id="flex-flow是flex-direction和flex-wrap的简写形式。默认值为-row-wrap"><a href="#flex-flow是flex-direction和flex-wrap的简写形式。默认值为-row-wrap" class="headerlink" title="flex-flow是flex-direction和flex-wrap的简写形式。默认值为 row wrap"></a>flex-flow是flex-direction和flex-wrap的简写形式。默认值为 row wrap</h4><h4 id="justify-content定义项目在主轴上的对齐方式（相当于text-align）"><a href="#justify-content定义项目在主轴上的对齐方式（相当于text-align）" class="headerlink" title="justify-content定义项目在主轴上的对齐方式（相当于text-align）"></a>justify-content定义项目在主轴上的对齐方式（相当于text-align）</h4><h5 id="flex-start-左对齐（默认）"><a href="#flex-start-左对齐（默认）" class="headerlink" title="flex-start:左对齐（默认）"></a>flex-start:左对齐（默认）</h5><pre><code>flex-end:右对齐
+center：居中
+space-between:两端对齐，项目之间的间隔都相等；
+space-around：每个项目的两侧的间隔相等。项目之间的间隔比边框的间隔大一倍
+space-evenly:每个项目之间的距离都一样，
+</code></pre><h5 id="align-items-定义项目在交叉轴上如何对齐"><a href="#align-items-定义项目在交叉轴上如何对齐" class="headerlink" title="align-items 定义项目在交叉轴上如何对齐"></a>align-items 定义项目在交叉轴上如何对齐</h5><p>flex-start:交叉轴的起点对齐</p>
+<p>flex-end:交叉轴的终点对齐</p>
+<p>baseline：基于第一行的文字对齐</p>
+<p>stretch: 默认值，容易未设置高度，将默认占整个屏幕的高度</p>
+<h5 id="align-content-定义了很多根轴线的对齐方式，如果只有一条轴线-就不会起作用"><a href="#align-content-定义了很多根轴线的对齐方式，如果只有一条轴线-就不会起作用" class="headerlink" title="align-content 定义了很多根轴线的对齐方式，如果只有一条轴线 就不会起作用"></a>align-content 定义了很多根轴线的对齐方式，如果只有一条轴线 就不会起作用</h5><p>要有很多根轴线，那么就至少要有两个轴线，box本身有一根轴线，那么里面的box-tall也得有一条轴线，的给他一个高，<br> box布局是flex，里面的容器就默认flex布局的，box-tall有了高 里面也有轴线，宽度是继承box的，这样才能align-content的效果才会实现</p>
+<p><strong>为啥里面的的宽度达到一定时，flex-end才会生效？？</strong></p>
+<p>flex-end：与交叉轴的终点对齐</p>
+<p>center：与交叉轴的中点对齐</p>
+<p>space-between：与交叉轴的两端对齐，轴线之间的间隔平均分布</p>
+<p>space-around：每根轴线两侧的间隔都相等，轴线之间的间隔比轴线与边框的间隔大一倍</p>
+<h5 id="里面的项目的所用的属性"><a href="#里面的项目的所用的属性" class="headerlink" title="里面的项目的所用的属性"></a>里面的项目的所用的属性</h5><p>order:integer 就是里面排列的先后顺序，越小越靠前.默认是0</p>
+<p>flex-grow：number 放大比例，默认为0 及时有剩余空间也不放大</p>
+<p>flex-shrink:number 默认为1 空间不足的话 会默认缩小</p>
+<p>flex-basis：length|auto 在分配多余空间之前，项目占据主轴空间，根据这个属性，计算主轴是否有多余的空间<br> 默认为auto，及项目本来的大小</p>
+<p>flex是flex-grow，flex-shrink，flex-basis的缩写<br>    该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。</p>
+<h5 id="align-self-单个项目与其他项目不一样的对齐方式，默认为auto-表示继承父元素的align-item-，如果没有父元素，就等同于strech"><a href="#align-self-单个项目与其他项目不一样的对齐方式，默认为auto-表示继承父元素的align-item-，如果没有父元素，就等同于strech" class="headerlink" title="align-self:单个项目与其他项目不一样的对齐方式，默认为auto(表示继承父元素的align-item)，如果没有父元素，就等同于strech"></a>align-self:单个项目与其他项目不一样的对齐方式，默认为auto(表示继承父元素的align-item)，如果没有父元素，就等同于strech</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F146f5b2f-5b4e-4302-b350-04442252333a%2FUntitled" alt=""></p>
+<p><br></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/25/studys/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-study" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/25/study/">study</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/25/study/" class="archive-article-date">
+  	<time datetime="2018-04-25T09:00:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/25/study/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-life" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -418,11 +600,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">服务器，service</a>
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
+                <a href="javascript:void(0)" class="js-tag color1">study</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">服务器，service</a>
               </li>
             
             <div class="clearfix"></div>
