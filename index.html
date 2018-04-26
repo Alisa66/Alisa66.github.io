@@ -202,9 +202,21 @@
 <p>  要有很多根轴线，那么就至少要有两个轴线，box本身有一根轴线，那么里面的box-tall也得有一条轴线，的给他一个高，<br>    box布局是flex，里面的容器就默认flex布局的，box-tall有了高 里面也有轴线，宽度是继承box的，这样才能align-content的效果才会实现</p>
 </blockquote>
 <p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff157cfb2-2fe9-467f-b340-61656c2658b1%2FUntitled" alt=""></p>
-<h4 id="容器里面的项目-div-拥有的属性"><a href="#容器里面的项目-div-拥有的属性" class="headerlink" title="容器里面的项目(div)拥有的属性"></a>容器里面的项目(div)拥有的属性</h4><h5 id="order-integer-就是里面排列的先后顺序，越小越靠前-默认是0"><a href="#order-integer-就是里面排列的先后顺序，越小越靠前-默认是0" class="headerlink" title="order:integer 就是里面排列的先后顺序，越小越靠前.默认是0"></a>order:integer 就是里面排列的先后顺序，越小越靠前.默认是0</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9fdc1298-a4cf-4395-af78-11433c4cf138%2FUntitled" alt=""></p>
-<h5 id="flex-grow：number-放大比例，默认为0-及时有剩余空间也不放大"><a href="#flex-grow：number-放大比例，默认为0-及时有剩余空间也不放大" class="headerlink" title="flex-grow：number 放大比例，默认为0 及时有剩余空间也不放大"></a>flex-grow：number 放大比例，默认为0 及时有剩余空间也不放大</h5><h5 id="flex-shrink-number-默认为1-空间不足的话-会默认缩小"><a href="#flex-shrink-number-默认为1-空间不足的话-会默认缩小" class="headerlink" title="flex-shrink:number 默认为1 空间不足的话 会默认缩小"></a>flex-shrink:number 默认为1 空间不足的话 会默认缩小</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4ff1d794-586b-41e7-b004-607582ff6e41%2FUntitled" alt=""></p>
-<h5 id="flex-basis：length-auto-在分配多余空间之前，项目占据主轴空间，根据这个属性，计算主轴是否有多余的空间默认为auto，及项目本来的大小-flex是flex-grow，flex-shrink，flex-basis的缩写-该属性有两个快捷值：auto-1-1-auto-和-none-0-0-auto-。"><a href="#flex-basis：length-auto-在分配多余空间之前，项目占据主轴空间，根据这个属性，计算主轴是否有多余的空间默认为auto，及项目本来的大小-flex是flex-grow，flex-shrink，flex-basis的缩写-该属性有两个快捷值：auto-1-1-auto-和-none-0-0-auto-。" class="headerlink" title="flex-basis：length|auto 在分配多余空间之前，项目占据主轴空间，根据这个属性，计算主轴是否有多余的空间默认为auto，及项目本来的大小 flex是flex-grow，flex-shrink，flex-basis的缩写  该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。"></a>flex-basis：length|auto 在分配多余空间之前，项目占据主轴空间，根据这个属性，计算主轴是否有多余的空间默认为auto，及项目本来的大小 flex是flex-grow，flex-shrink，flex-basis的缩写  该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。</h5><h5 id="align-self-单个项目与其他项目不一样的对齐方式，默认为auto-表示继承父元素的align-item-，如果没有父元素，就等同于strech"><a href="#align-self-单个项目与其他项目不一样的对齐方式，默认为auto-表示继承父元素的align-item-，如果没有父元素，就等同于strech" class="headerlink" title="align-self:单个项目与其他项目不一样的对齐方式，默认为auto(表示继承父元素的align-item)，如果没有父元素，就等同于strech"></a>align-self:单个项目与其他项目不一样的对齐方式，默认为auto(表示继承父元素的align-item)，如果没有父元素，就等同于strech</h5><p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7bb9601a-ffb1-4cbc-8154-2ae792289d5e%2FUntitled" alt=""><br><br></p>
+<h4 id="容器里面的项目-div-拥有的属性"><a href="#容器里面的项目-div-拥有的属性" class="headerlink" title="容器里面的项目(div)拥有的属性"></a>容器里面的项目(div)拥有的属性</h4><blockquote>
+<p> order:integer 就是里面排列的先后顺序，越小越靠前.默认是0</p>
+</blockquote>
+<p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9fdc1298-a4cf-4395-af78-11433c4cf138%2FUntitled" alt=""></p>
+<blockquote>
+<p>  flex-grow：number 放大比例，默认为0 及时有剩余空间也不放大<br>  flex-shrink:number 默认为1 空间不足的话 会默认缩小</p>
+</blockquote>
+<p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4ff1d794-586b-41e7-b004-607582ff6e41%2FUntitled" alt=""></p>
+<blockquote>
+<p>flex-basis：length|auto 在分配多余空间之前，项目占据主轴空间，根据这个属性，计算主轴是否有多余的空间默认为auto，及项目本来的大小 flex是   flex-grow，flex-shrink，   flex-basis的缩写  该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。</p>
+</blockquote>
+<blockquote>
+<p>align-self:单个项目与其他项目不一样的对齐方式，默认为auto(表示继承父元素的align-item)，如果没有父元素，就等同于strech</p>
+</blockquote>
+<p><img src="https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7bb9601a-ffb1-4cbc-8154-2ae792289d5e%2FUntitled" alt=""><br><br></p>
 
       
 
@@ -602,11 +614,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
+                <a href="javascript:void(0)" class="js-tag color2">服务器，service</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">服务器，service</a>
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
              
               <li class="article-tag-list-item">
