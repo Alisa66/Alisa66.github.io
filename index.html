@@ -153,6 +153,95 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sass-less" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="sass-和-less"><a href="#sass-和-less" class="headerlink" title="sass 和 less"></a>sass 和 less</h1><h1 id="less-一种动态样式语言"><a href="#less-一种动态样式语言" class="headerlink" title="less(一种动态样式语言)"></a>less(一种动态样式语言)</h1><hr>
+<p>1.变量定义用 @</p>
+<p>很容易理解:</p>
+<pre><code>@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header { color: @light-blue; }
+</code></pre><p>输出:</p>
+<pre><code>#header { color: #6c94be; }
+</code></pre><p>甚至可以用变量名定义为变量:</p>
+<pre><code>@fnord: &quot;I am fnord.&quot;;
+@var: &apos;fnord&apos;;
+content: @@var;
+</code></pre><p>解析后:</p>
+<pre><code>content: &quot;I am fnord.&quot;;
+</code></pre><p>2.混合</p>
+<p>在 LESS 中我们可以定义一些通用的属性集为一个class，然后在另一个class中去调用这些属性. 下面有这样一个class:</p>
+<pre><code>.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+</code></pre><p>那如果我们现在需要在其他class中引入那些通用的属性集，那么我们只需要在任何class中像下面这样调用就可以了:</p>
+<pre><code>#menu a {
+  color: #111;
+  .bordered;
+}
+.post a {
+  color: red;
+  .bordered;
+}
+</code></pre><p>3.带参数混合</p>
+<p>我们还可以像这样给参数设置默认值:</p>
+<pre><code>.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+</code></pre><p>所以现在如果我们像这样调用它的话:</p>
+<pre><code>#header {
+  .border-radius;  
+}
+</code></pre>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/21/sass-less/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-闲的无聊" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -201,91 +290,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/05/21/闲的无聊/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/">sass 和 less</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/" class="archive-article-date">
-  	<time datetime="2018-05-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="less-一种动态样式语言"><a href="#less-一种动态样式语言" class="headerlink" title="less(一种动态样式语言)"></a>less(一种动态样式语言)</h3><p>1.变量定义用 @<br> 比如:</p>
-<pre><code>@nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
-
-#header { color: @light-blue; }
-</code></pre><p>输出:</p>
-<pre><code>#header { color: #6c94be; }
-</code></pre><p>甚至可以用变量名定义为变量:</p>
-<pre><code>@fnord: &quot;I am fnord.&quot;;
-@var: &apos;fnord&apos;;
-content: @@var;
-</code></pre><p>解析后:<br>   content: “I am fnord.”;<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study/sass/less</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/">展开全文 >></a>
         </p>
       
 
@@ -721,15 +725,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">study</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">study/sass/less</a>
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
             
             <div class="clearfix"></div>

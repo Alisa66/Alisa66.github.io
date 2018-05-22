@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sass 和 less | 六柳|的网站</title>
+  <title>六柳|的网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="less(一种动态样式语言)1.变量定义用 @ 比如: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord.&amp;quot;; @var:">
-<meta name="keywords" content="study&#x2F;sass&#x2F;less">
+  <meta name="description" content="sass 和 lessless(一种动态样式语言) 1.变量定义用 @ 很容易理解: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sass 和 less">
-<meta property="og:url" content="http://yoursite.com/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/index.html">
+<meta property="og:title" content="六柳|的网站">
+<meta property="og:url" content="http://yoursite.com/2018/05/21/sass-less/index.html">
 <meta property="og:site_name" content="六柳|的网站">
-<meta property="og:description" content="less(一种动态样式语言)1.变量定义用 @ 比如: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord.&amp;quot;; @var:">
+<meta property="og:description" content="sass 和 lessless(一种动态样式语言) 1.变量定义用 @ 很容易理解: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-21T09:28:30.329Z">
+<meta property="og:updated_time" content="2018-05-22T09:12:29.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass 和 less">
-<meta name="twitter:description" content="less(一种动态样式语言)1.变量定义用 @ 比如: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord.&amp;quot;; @var:">
+<meta name="twitter:title" content="六柳|的网站">
+<meta name="twitter:description" content="sass 和 lessless(一种动态样式语言) 1.变量定义用 @ 很容易理解: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord">
   
     <link rel="alternative" href="/atom.xml" title="六柳|的网站" type="application/atom+xml">
   
@@ -153,27 +152,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sass-less" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      sass 和 less
-    </h1>
-  
-
-        
-        <a href="/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/" class="archive-article-date">
-  	<time datetime="2018-05-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="less-一种动态样式语言"><a href="#less-一种动态样式语言" class="headerlink" title="less(一种动态样式语言)"></a>less(一种动态样式语言)</h3><p>1.变量定义用 @<br> 比如:</p>
+        <h1 id="sass-和-less"><a href="#sass-和-less" class="headerlink" title="sass 和 less"></a>sass 和 less</h1><h1 id="less-一种动态样式语言"><a href="#less-一种动态样式语言" class="headerlink" title="less(一种动态样式语言)"></a>less(一种动态样式语言)</h1><hr>
+<p>1.变量定义用 @</p>
+<p>很容易理解:</p>
 <pre><code>@nice-blue: #5B83AD;
 @light-blue: @nice-blue + #111;
 
@@ -184,8 +170,9 @@
 <pre><code>@fnord: &quot;I am fnord.&quot;;
 @var: &apos;fnord&apos;;
 content: @@var;
-</code></pre><p>解析后:<br>   content: “I am fnord.”;<br>    <a id="more"></a></p>
-<p>2.混合</p>
+</code></pre><p>解析后:</p>
+<pre><code>content: &quot;I am fnord.&quot;;
+</code></pre><p>2.混合</p>
 <p>在 LESS 中我们可以定义一些通用的属性集为一个class，然后在另一个class中去调用这些属性. 下面有这样一个class:</p>
 <pre><code>.bordered {
   border-top: dotted 1px black;
@@ -211,7 +198,8 @@ content: @@var;
 <pre><code>#header {
   .border-radius;  
 }
-</code></pre><p>4.<code>@arguments</code> 变量</p>
+</code></pre><a id="more"></a>
+<p>4.<code>@arguments</code> 变量</p>
 <p><code>@arguments</code>包含了所有传递进来的参数. 如果你不想单独处理每一个参数的话就可以像这样写:</p>
 <pre><code>.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
   box-shadow: @arguments;
@@ -304,7 +292,25 @@ content: @@var;
 <p>变量可以用类似ruby和php的方式嵌入到字符串中，像<code>@{name}</code>这样的结构:</p>
 <pre><code>@base-url: &quot;http://assets.fnord.com&quot;;
 background-image: url(&quot;@{base-url}/images/bg.png&quot;);
-</code></pre>
+</code></pre><h1 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h1><p>1.变量以 $ 开头</p>
+<p>2。也可以使用算式</p>
+<p>3。也可以嵌套</p>
+<p>4。继承不一样了 用extend .xxx xxx是你写好的需要在其他地方继承的</p>
+<p>5。</p>
+<p>Mixin有点像C语言的宏（macro），是可以重用的代码块。</p>
+<p>使用@mixin命令，定义一个代码块。</p>
+<p>@mixin left {　float: left;　　margin-left: 10px;　　}</p>
+<p>使用@include命令，调用这个mixin。</p>
+<p>div {　　　　@include left;　　}</p>
+<p>mixin的强大之处，在于可以指定参数和缺省值。</p>
+<p>@mixin left($value: 10px) {　　　　float: left;　　　　margin-right: $value;　　}</p>
+<p>使用的时候，根据需要加入参数：</p>
+<p>   div {　　　　@include left(20px);　　}</p>
+<p>6。也提供了颜色函数，和less一样</p>
+<p>7。插入文件也是用@import</p>
+<p>8。可以用if来判断</p>
+<p>9。也可以自定义函数</p>
+
       
 
       
@@ -343,17 +349,6 @@ background-image: url(&quot;@{base-url}/images/bg.png&quot;);
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">study/sass/less</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -404,7 +399,7 @@ background-image: url(&quot;@{base-url}/images/bg.png&quot;);
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/21/sass-less/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -418,18 +413,9 @@ background-image: url(&quot;@{base-url}/images/bg.png&quot;);
   
 <nav id="article-nav">
   
-    <a href="/2018/05/21/闲的无聊/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          大概是闲的无聊吧
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/09/2018.5.09/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">后来的我们</div>
+    <a href="/2018/05/21/闲的无聊/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大概是闲的无聊吧</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -456,7 +442,7 @@ background-image: url(&quot;@{base-url}/images/bg.png&quot;);
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#less-一种动态样式语言"><span class="toc-number">1.</span> <span class="toc-text">less(一种动态样式语言)</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sass-和-less"><span class="toc-number">1.</span> <span class="toc-text">sass 和 less</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#less-一种动态样式语言"><span class="toc-number">2.</span> <span class="toc-text">less(一种动态样式语言)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sass"><span class="toc-number">3.</span> <span class="toc-text">Sass</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -473,8 +459,8 @@ background-image: url(&quot;@{base-url}/images/bg.png&quot;);
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2018/05/21/sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47/", 
-    sourceId: "sass-less-39081aa7-afa3-4a9e-98e4-8a05ca8eef47",
+    url: "http://yoursite.com/2018/05/21/sass-less/", 
+    sourceId: "sass-less",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -577,15 +563,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">study</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">study/sass/less</a>
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
             
             <div class="clearfix"></div>
