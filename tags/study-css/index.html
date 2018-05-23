@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>六柳|的网站</title>
+  <title>Tag: study/css | 六柳|的网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sass 和 lessless(一种动态样式语言) 1.变量定义用 @ 很容易理解: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord">
-<meta property="og:type" content="article">
+  <meta name="description" content="天天开心">
+<meta property="og:type" content="website">
 <meta property="og:title" content="六柳|的网站">
-<meta property="og:url" content="http://yoursite.com/2018/05/21/sass-less/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/study-css/index.html">
 <meta property="og:site_name" content="六柳|的网站">
-<meta property="og:description" content="sass 和 lessless(一种动态样式语言) 1.变量定义用 @ 很容易理解: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord">
+<meta property="og:description" content="天天开心">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-22T09:12:29.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="六柳|的网站">
-<meta name="twitter:description" content="sass 和 lessless(一种动态样式语言) 1.变量定义用 @ 很容易理解: @nice-blue: #5B83AD; @light-blue: @nice-blue + #111;  #header { color: @light-blue; } 输出: #header { color: #6c94be; } 甚至可以用变量名定义为变量: @fnord: &amp;quot;I am fnord">
+<meta name="twitter:description" content="天天开心">
   
     <link rel="alternative" href="/atom.xml" title="六柳|的网站" type="application/atom+xml">
   
@@ -152,336 +151,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass-less" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-    <div class="article-entry" itemprop="articleBody">
+    
       
-        <h1 id="sass-和-less"><a href="#sass-和-less" class="headerlink" title="sass 和 less"></a>sass 和 less</h1><h1 id="less-一种动态样式语言"><a href="#less-一种动态样式语言" class="headerlink" title="less(一种动态样式语言)"></a>less(一种动态样式语言)</h1><hr>
-<p>1.变量定义用 @</p>
-<p>很容易理解:</p>
-<pre><code>@nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
-
-#header { color: @light-blue; }
-</code></pre><p>输出:</p>
-<pre><code>#header { color: #6c94be; }
-</code></pre><p>甚至可以用变量名定义为变量:</p>
-<pre><code>@fnord: &quot;I am fnord.&quot;;
-@var: &apos;fnord&apos;;
-content: @@var;
-</code></pre><p>解析后:</p>
-<pre><code>content: &quot;I am fnord.&quot;;
-</code></pre><p>2.混合</p>
-<p>在 LESS 中我们可以定义一些通用的属性集为一个class，然后在另一个class中去调用这些属性. 下面有这样一个class:</p>
-<pre><code>.bordered {
-  border-top: dotted 1px black;
-  border-bottom: solid 2px black;
-}
-</code></pre><p>那如果我们现在需要在其他class中引入那些通用的属性集，那么我们只需要在任何class中像下面这样调用就可以了:</p>
-<pre><code>#menu a {
-  color: #111;
-  .bordered;
-}
-.post a {
-  color: red;
-  .bordered;
-}
-</code></pre><p>3.带参数混合</p>
-<p>我们还可以像这样给参数设置默认值:</p>
-<pre><code>.border-radius (@radius: 5px) {
-  border-radius: @radius;
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-}
-</code></pre><p>所以现在如果我们像这样调用它的话:</p>
-<pre><code>#header {
-  .border-radius;  
-}
-</code></pre><a id="more"></a>
-<p>4.<code>@arguments</code> 变量</p>
-<p><code>@arguments</code>包含了所有传递进来的参数. 如果你不想单独处理每一个参数的话就可以像这样写:</p>
-<pre><code>.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
-  box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  -webkit-box-shadow: @arguments;
-}
-.box-shadow(2px, 5px);
-</code></pre><p>将会输出:</p>
-<pre><code>box-shadow: 2px 5px 1px #000;
-  -moz-box-shadow: 2px 5px 1px #000;
-  -webkit-box-shadow: 2px 5px 1px #000;
-</code></pre><hr>
-<p>5.模式匹配和引导（这个我也不太懂）</p>
-<p>这里的lighten(@color，10%)是函数</p>
-<p>有些情况下，我们想根据传入的参数来改变混合的默认呈现，比如下面这个例子：</p>
-<pre><code>.mixin (@s, @color) { ... }
-
-.class {
-  .mixin(@switch, #888);
-}
-</code></pre><p>如果想让<code>.mixin</code>根据不同的<code>@switch</code>值而表现各异，如下这般设置：</p>
-<pre><code>.mixin (dark, @color) {
-  color: darken(@color, 10%);
-}
-.mixin (light, @color) {
-  color: lighten(@color, 10%);
-}
-.mixin (@_, @color) {
-  display: block;
-}
-</code></pre><p>现在，如果运行:</p>
-<pre><code>@switch: light;
-
-.class {
-  .mixin(@switch, #888);
-}
-</code></pre><p>就会得到下列CSS:</p>
-<pre><code>.class {
-  color: #a2a2a2;
-  display: block;
-}
-</code></pre><p>可以使用when，： &gt; &gt;= = =&lt; &lt;，true只表示布尔真值，其余的都是假的</p>
-<p>6.下面就是常见的检测函式：</p>
-<ul>
-<li><code>iscolor</code></li>
-<li><code>isnumber</code></li>
-<li><code>isstring</code></li>
-<li><code>iskeyword</code></li>
-<li><code>isurl</code></li>
-</ul>
-<p>如果你想判断一个值是纯数字，还是某个单位量，可以使用下列函式：</p>
-<ul>
-<li><code>ispixel</code></li>
-<li><code>ispercentage</code></li>
-<li><code>isem</code></li>
-</ul>
-<ol start="7">
-<li>and实现与关系，not实现或关系</li>
-</ol>
-<p>8.嵌套规则</p>
-<pre><code>#header {
-  color: black;
-
-  .navigation {
-    font-size: 12px;
-  }
-  .logo {
-    width: 300px;
-    &amp;:hover { text-decoration: none }
-  }
-}
-</code></pre><p>或者这样写:</p>
-<pre><code>#header        { color: black;
-  .navigation  { font-size: 12px }
-  .logo        { width: 300px;
-    &amp;:hover    { text-decoration: none }
-  }
-}
-</code></pre><p>9.运算</p>
-<p>任何数字、颜色或者变量都可以参与运算</p>
-<p>color: #888 / 4; </p>
-<p>输出</p>
-<p>color：#222</p>
-<p>10.Color函数，感觉用到的不多</p>
-<p>11.Math函数</p>
-<p>12.作用域， 就近原则查找，如果自身旁边没有，就像父级查找</p>
-<p>13.如果你想导入一个CSS文件而且不想LESS对它进行处理，只需要使用<code>.css</code>后缀就可以:</p>
-<pre><code>@import &quot;lib.css&quot;;
-</code></pre><p>14 字符串插值</p>
-<p>变量可以用类似ruby和php的方式嵌入到字符串中，像<code>@{name}</code>这样的结构:</p>
-<pre><code>@base-url: &quot;http://assets.fnord.com&quot;;
-background-image: url(&quot;@{base-url}/images/bg.png&quot;);
-</code></pre><h1 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h1><p>1.变量以 $ 开头</p>
-<p>2。也可以使用算式</p>
-<p>3。也可以嵌套</p>
-<p>4。继承不一样了 用extend .xxx xxx是你写好的需要在其他地方继承的</p>
-<p>5。</p>
-<p>Mixin有点像C语言的宏（macro），是可以重用的代码块。</p>
-<p>使用@mixin命令，定义一个代码块。</p>
-<p>@mixin left {　float: left;　　margin-left: 10px;　　}</p>
-<p>使用@include命令，调用这个mixin。</p>
-<p>div {　　　　@include left;　　}</p>
-<p>mixin的强大之处，在于可以指定参数和缺省值。</p>
-<p>@mixin left($value: 10px) {　　　　float: left;　　　　margin-right: $value;　　}</p>
-<p>使用的时候，根据需要加入参数：</p>
-<p>   div {　　　　@include left(20px);　　}</p>
-<p>6。也提供了颜色函数，和less一样</p>
-<p>7。插入文件也是用@import</p>
-<p>8。可以用if来判断</p>
-<p>9。也可以自定义函数</p>
-
       
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/airpay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/05/23/sass-and-less/" class="archive-article-date">
+  	<time datetime="2018-05-23T06:23:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
+</a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/23/sass-and-less/">sass and  less</a>
+    </h1>
+  
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/05/21/sass-less/" alt="微信分享二维码">
-    </div>
-</div>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">study/css</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/05/23/JS/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JS
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/05/21/闲的无聊/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">大概是闲的无聊吧</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sass-和-less"><span class="toc-number">1.</span> <span class="toc-text">sass 和 less</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#less-一种动态样式语言"><span class="toc-number">2.</span> <span class="toc-text">less(一种动态样式语言)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sass"><span class="toc-number">3.</span> <span class="toc-text">Sass</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2018/05/21/sass-less/", 
-    sourceId: "sass-less",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -508,9 +231,9 @@ background-image: url(&quot;@{base-url}/images/bg.png&quot;);
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
@@ -572,15 +295,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">study/JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">life</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">study/JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">study</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">study/css</a>
               </li>
             
             <div class="clearfix"></div>
